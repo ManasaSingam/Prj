@@ -1,0 +1,16 @@
+h1{
+    text-transform:lowercase;
+    font-size:1cm;
+    font-style:italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ff0055;
+    
+}
+h2{
+    font-size:large;
+    font-style: italic;
+    color:rgb(130, 42, 165);
+}
+p1{
+    text-align: center;
+}

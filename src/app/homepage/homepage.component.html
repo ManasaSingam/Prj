@@ -1,0 +1,85 @@
+<p>homepage works!</p>
+
+<nav class="navbar navbar-inverse">
+  
+  <div class="container-fluid"><!--container-fluid-->
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav"><!--navbar-nav-->
+      <li class="active"><a href="#">About</a></li>
+      <li class="active"><a href="#">Terms of Use</a></li>
+      <li class="active"><a href="#">Contact Us</a></li>
+    
+    </ul>
+
+    
+  </div>
+</nav>
+
+&nbsp; &nbsp;
+
+
+  <form class="form-inline" action="/action_page.php">
+      <h2>Online Tickets Booking</h2>
+      <div class="form-group">
+          <h4>Departure
+              
+              <input type="text" [(ngModel)]="searchbus.Departure" name="departure"/>
+              
+          </h4>
+       </div>
+       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+       <div class="form-group">
+          <h4>Destination
+           
+           <input type="text" [(ngModel)]="searchbus.Destination" name="destination"/>
+       </h4>
+      </div>
+      <br>
+     <div class="form-group">
+      <h4>Date Of Journey</h4>
+     <input type="date">
+     </div>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <div class="form-group">
+          <h4>Date Of Return(Optional)</h4>
+          <input type="date">
+      </div>
+      <br><br>
+<!-- <p>
+  <button type="button" class="btn btn-info" (click)="doclick()">Search Bus</button>
+</p> -->
+<p><button><a routerLink="seating" class="nav-link" routerLinkActive="active" (click)="doclick()"> searchbus</a></button></p>
+
+<!-- {{bus|json}}  -->
+
+<div class="container">
+      
+  <table class="table">
+    <thead>
+      <tr>
+        <th>BusNo</th>
+        <th>BusType</th>
+        <th>BusName</th>
+        <th>Departure</th>
+        <th>Destination</th>
+        <th>NoOfSeatsAvailable</th>
+        <th>StartDate</th>
+       
+      </tr>
+    </thead>
+    <tbody *ngFor="let b of bus">
+     
+      <tr class="info">
+       
+        <td>{{b.busNo}}</td>
+        <td>{{b.busType}}</td>
+        <td>{{b.busName}}</td>
+        <td>{{b.departure}}</td>
+        <td>{{b.destination}}</td>
+        <td>{{b.noOfSeatsAvailable}}</td>
+        <td>{{b.startDate}}</td>
+        <p> <button><a routerLink="seating" class="nav-link" routerLinkActive="active" (click)="doclick()">Book</a></button></p>
+
+      </tr> 
+    </tbody>
